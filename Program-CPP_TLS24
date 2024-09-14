@@ -1,0 +1,27 @@
+#include <iostream>
+#include <string>
+
+int main() {
+    double height, weight, bmi ;
+    std::string category;
+    
+    // Input height and weight
+    std::cout << "Enter your height in meters: ";
+    std::cin >> height;
+    std::cout << "Enter your weight in kilograms: ";
+    std::cin >> weight;
+    
+    // Calculate BMI
+    bmi = weight / (height * height);
+    
+    // Category
+    category = (bmi < 18.5) ? "Underweight" :
+               (bmi < 25.0) ? "Normal weight" :
+               (bmi < 30.0) ? "Overweight" : "Obese" ;
+              
+    // Output BMI and category
+    std::cout << "Your BMI is: " << bmi << std::endl;
+    std::cout << "Category: " << category << std::endl;
+    
+    return 0;
+}
